@@ -6,7 +6,9 @@ This repository contains the code for the Neuromap Application. Follow the steps
 
 - [Git](https://git-scm.com/downloads)
 - Django
-- Python (if applicable)
+- Python
+- html
+- css
 
 ## Setup Instructions
 
