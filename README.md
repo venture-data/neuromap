@@ -15,7 +15,7 @@ This repository contains the code for the Neuromap Application. Follow the steps
 To clone the repository to your local machine, run:
 
 ```bash
-git clone git@github.com:your-username/neuromap-application.git
+git clone git@github.com:venture-data/neuromap.git
 cd neuromap-application
 ```
 ### 2. Add envs
