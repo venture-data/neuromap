@@ -1,0 +1,302 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add New Patient </title>
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon"> <!-- Favicon-->
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}" />
+    <!-- project css file  -->
+    <link rel="stylesheet" href="{% static 'assets/css/e-learn.style.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker3.min.css" integrity="sha512-aQb0/doxDGrw/OC7drNaJQkIKFu6eSWnVMAwPN64p6sZKeJ4QCDYL42Rumw2ZtL8DB9f66q4CnLIUnAw28dEbg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+<body>
+
+<div id="elearn-layout" class="theme-black">
+    
+    <!-- sidebar -->
+    <div class="sidebar px-4 py-4 py-md-4  me-0 sidebar-mini">
+        <div class="d-flex flex-column h-100">
+            <a href="index.html" class="mb-0 brand-icon">
+                <span class="logo-icon" style="background: none">
+                    <img src="{% static 'assets/images/logo-icon.png' %}" width="70" />
+                </span>
+                <span class="logo-text"><img src="{% static 'assets/images/logo.png' %}" class="img-fluid" /></span>
+            </a>
+            <!-- Menu: main ul -->
+            <ul class="menu-list flex-grow-1 mt-3">
+                <li><a class="m-link" href="{% url 'dashboard' %}"><i class="icofont-home fs-5"></i><span>Home</span></a>
+                </li>
+                <li><a class="m-link" href="patients.html"><i class="icofont-patient-bed"></i> <span>Patients</span></a>
+                </li>
+                <li><a class="m-link" href="patients.html"><i class="icofont-archive"></i> <span>Archived Patients</span></a></li>
+                <li><a class="m-link active" href="patients-add.html"><i class="icofont-plus-square"></i> <span>Add Patient</span></a></li>
+                <li><a class="m-link" href="settings.html"><i class="icofont-gear"></i> <span>Settings</span></a></li>
+                <li><a class="m-link" href="support.html"><i class="icofont-question-square"></i> <span>Help/Support</span></a></li>
+                <li><a class="m-link" href="logout.html"><i class="icofont-logout"></i> <span>Logout</span></a></li>
+            </ul>
+
+            <!-- Theme: Switch Theme -->
+            <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center justify-content-center">
+                    <div class="form-check form-switch theme-switch">
+                        <input class="form-check-input" type="checkbox" id="theme-switch">
+                        <label class="form-check-label" for="theme-switch">Enable Dark Mode!</label>
+                    </div>
+                </li>
+            </ul>
+            <!-- Menu: menu collepce btn -->
+            <button type="button" class="btn btn-link sidebar-mini-btn text-light">
+                <span class="ms-2"><i class="icofont-bubble-right"></i></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- main body area -->
+    <div class="main px-lg-4 px-md-4">
+
+        <!-- Body: Header -->
+        <div class="header">
+            <nav class="navbar py-4">
+                <div class="container-xxl">
+    
+                    <!-- header rightbar icon -->
+                    <div class="h-right d-flex align-items-center mr-5 mr-lg-0 order-1">
+                        <div class="dropdown notifications zindex-popover">
+                            <a class="nav-link dropdown-toggle pulse" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="icofont-alarm fs-5"></i>
+                                <span class="pulse-ring"></span>
+                            </a>
+                            <div id="NotificationsDiv" class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-sm-end p-0 m-0">
+                                <div class="card border-0 w380">
+                                    <div class="card-header border-0 p-3">
+                                        <h5 class="mb-0 font-weight-light d-flex justify-content-between">
+                                            <span>Notifications</span>
+                                            <span class="badge text-white">14</span>
+                                        </h5>
+                                    </div>
+                                    <div class="tab-content card-body">
+                                        <div class="tab-pane fade show active">
+                                            <ul class="list-unstyled list mb-0">
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="{% static 'assets/images/xs/avatar1.jpg' %}" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Molly Cornish</span> <small>2MIN</small></p>
+                                                            <span class="">Added  2021-02-19 e-Learn links_no_expiration_report.csv <span class="badge bg-success">Review</span></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <div class="avatar rounded-circle no-thumbnail">DF</div>
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Diane Fisher</span> <small>13MIN</small></p>
+                                                            <span class="">Server added Get Started with e-Learn.pdf</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="{% static 'assets/images/xs/avatar3.jpg' %}" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Andrea Gill</span> <small>1HR</small></p>
+                                                            <span class="">Server added Document.docx</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="{% static 'assets/images/xs/avatar5.jpg' %}" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Diane Fisher</span> <small>13MIN</small></p>
+                                                            <span class="">Add folder on Server</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="{% static 'assets/images/xs/avatar6.jpg' %}" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Andrea Gill</span> <small>1HR</small></p>
+                                                            <span class="">Delete folder on Server</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="{% static 'assets/images/xs/avatar7.jpg' %}" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Zoe Wright</span> <small class="">1DAY</small></p>
+                                                            <span class="">The generated Lorem Ipsum</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a class="card-footer text-center border-top-0" href="#"> View all notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
+                            <div class="u-info me-2">
+                                <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold">Justin Fisher</span></p>
+                                <small>Teacher Profile</small>
+                            </div>
+                            <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                <img class="avatar lg rounded-circle img-thumbnail" src="{% static 'assets/images/profile-teacher.jpg' %}" alt="profile">
+                            </a>
+                            <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
+                                <div class="card border-0 w280">
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex py-1">
+                                            <img class="avatar rounded-circle" src="% static {assets/images/profile-teacher.jpg} %" alt="profile">
+                                            <div class="flex-fill ms-3">
+                                                <p class="mb-0"><span class="font-weight-bold">Justin Fisher</span></p>
+                                                <small class="">justin.fisher@gamil.com</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                    </div>
+                                    <div class="list-group m-2 ">
+                                        <a href="users.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-settings fs-6 me-3"></i>User Settings</a>
+                                        <a href="ui-elements/auth-signin.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                        <span class="list-group-item list-group-item-action border-0"><i class="icofont-calendar fs-5 me-3"></i>5 Sept, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- menu toggler -->
+                    <button class="navbar-toggler p-0 border-0 menu-toggle order-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainHeader">
+                        <span class="fa fa-bars"></span>
+                    </button>
+    
+                    <!-- main menu Search-->
+                    <div class="order-0 col-lg-4 col-md-4 col-sm-12 col-12 mb-3 mb-md-0 ">
+                        <div class="input-group flex-nowrap input-group-lg">
+                            <button type="button" class="input-group-text" id="addon-wrapping"><i class="fa fa-search"></i></button>
+                            <input type="search" class="form-control" placeholder="Search" aria-label="search" aria-describedby="addon-wrapping">
+                            <button type="button" class="input-group-text add-member-top" id="addon-wrappingone" data-bs-toggle="modal" data-bs-target="#addUser"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+        </div>
+
+        <!-- Body: Body -->
+        <div class="body d-flex py-lg-3 py-md-2">
+            <div class="container-xxl">
+                <div class="row clearfix row-deck g-4">
+                    <div class="col-lg-12 col-md-12 flex-column">
+                        <div class="card">
+                            <div class="card-header py-3">
+                                <h6 class="mb-0 fw-bold">Add New Patient</h6>
+                            </div>
+                            {% if messages %}
+                            <div class="container mt-3">
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}" role="alert">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                            <div class="card-body">
+                                <form name="add-patient" id="add-patient" method="post" action="{% url 'patients_add' %}">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                        </div>
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">DOB</label>
+                                            <input type="text" class="form-control datepicker" id="dob" name="dob" placeholder="DOB">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">Age</label>
+                                            <input type="number" class="form-control" id="age" name="age" placeholder="Age" >
+                                        </div>
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">Gender</label>
+                                            <select class="form-select" name="gender" id="gender">
+                                                <option value="">Please select</option>
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">Clinic ID</label>
+                                            <input type="text" class="form-control" id="clinic_id" name="clinic_id" placeholder="Clinic ID">
+                                        </div>
+                                        <div class="form-group mb-3 col-md-6">
+                                            <label class="mb-1">Contact Name</label>
+                                            <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Contact Name">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-12">
+                                            <label class="mb-1">Contact Mobile</label>
+                                            <input type="text" class="form-control numberonly" id="contact_mobile" name="contact_mobile" placeholder="Contact Mobile">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-12">
+                                            <label class="mb-1">Notes by Admin</label>
+                                            <textarea class="form-control" id="notes_by_admin" name="notes_by_admin" placeholder="Notes by Admin"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mb-3 col-md-12">
+                                            <label class="mb-1">Notes by Neuroscientist</label>
+                                            <textarea class="form-control" id="notes_by_neuroscientist" name="notes_by_neuroscientist" placeholder="Notes by Neuroscientist"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group mt-3 mb-3 col-md-12">
+                                            <button type="submit" class="btn btn-success">Save Patient</button>
+                                            <button type="submit" class="btn btn-light">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Row End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script>
+
+<!-- Plugin Js-->
+<script src="{% static 'assets/bundles/carousel.bundle.js' %}"></script>
+<script src="{% static 'assets/bundles/apexcharts.bundle.js' %}"></script>
+
+<!-- Jquery Page Js -->
+<script src="{% static 'js/template.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js" integrity="sha512-LsnSViqQyaXpD4mBBdRYeP6sRwJiJveh2ZIbW41EBrNmKxgr/LFZIiWT6yr+nycvhvauz8c2nYMhrP80YhG7Cw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{% static 'js/page/index.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendors/jquery-validation/jquery.validate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendors/jquery-validation/additional-methods.min.js' %}"></script>
+<script src="{% static 'js/page/add-patient.js' %}"></script>
+</body>
+</html>

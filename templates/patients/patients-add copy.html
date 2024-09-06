@@ -1,0 +1,376 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add New Patient </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <!-- plugin css file  -->
+    <link rel="stylesheet" href="assets/css/carousel.min.css" />
+    <!-- project css file  -->
+    <link rel="stylesheet" href="assets/css/e-learn.style.min.css">
+</head>
+<body>
+
+<div id="elearn-layout" class="theme-black">
+    
+    <!-- sidebar -->
+    <div class="sidebar px-4 py-4 py-md-4  me-0">
+        <div class="d-flex flex-column h-100">
+            <a href="index.html" class="mb-0 brand-icon">
+                <span class="logo-icon" style="background: none; width: auto">
+                    <img src="assets/images/neuromap-logo.svg" width="200" />
+                </span>
+            </a>
+            <!-- Menu: main ul -->
+            <ul class="menu-list flex-grow-1 mt-3">
+                <li><a class="m-link" href="index.html"><i class="icofont-graduate fs-5"></i><span>Home</span></a>
+                </li>
+                <li><a class="m-link" href="patients.html"><i class="icofont-file-document"></i> <span>Patients</span></a>
+                </li>
+                <li><a class="m-link active" href="patients-add.html"><i class="icofont-ui-clock"></i> <span>Add Patient</span></a></li>
+                <li><a class="m-link" href="settings.html"><i class="icofont-star-e-Learn"></i> <span>Settings</span></a></li>
+                <li><a class="m-link" href="support.html"><i class="icofont-slidshare"></i> <span>Help/Support</span></a></li>
+                <li><a class="m-link" href="logout.html"><i class="icofont-man-in-glasses"></i> <span>Logout</span></a></li>
+            </ul>
+
+            <!-- Theme: Switch Theme -->
+            <ul class="list-unstyled mb-0">
+                <li class="d-flex align-items-center justify-content-center">
+                    <div class="form-check form-switch theme-switch">
+                        <input class="form-check-input" type="checkbox" id="theme-switch">
+                        <label class="form-check-label" for="theme-switch">Enable Dark Mode!</label>
+                    </div>
+                </li>
+            </ul>
+            <!-- Menu: menu collepce btn -->
+            <button type="button" class="btn btn-link sidebar-mini-btn text-light">
+                <span class="ms-2"><i class="icofont-bubble-right"></i></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- main body area -->
+    <div class="main px-lg-4 px-md-4">
+
+        <!-- Body: Header -->
+        <div class="header">
+            <nav class="navbar py-4">
+                <div class="container-xxl">
+    
+                    <!-- header rightbar icon -->
+                    <div class="h-right d-flex align-items-center mr-5 mr-lg-0 order-1">
+                        <div class="d-flex">
+                            <a class="nav-link text-primary collapsed" href="help.html" title="Get Help">
+                                <i class="icofont-info-square fs-5"></i>
+                            </a>
+                            <div class="avatar-list avatar-list-stacked px-3">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar2.jpg" alt="">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar3.jpg" alt="">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar4.jpg" alt="">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar7.jpg" alt="">
+                                <img class="avatar rounded-circle" src="assets/images/xs/avatar8.jpg" alt="">
+                                <span class="avatar rounded-circle text-center pointer" data-bs-toggle="modal" data-bs-target="#addUser"><i class="icofont-ui-add"></i></span>
+                            </div>
+                        </div>
+                        <div class="dropdown notifications zindex-popover">
+                            <a class="nav-link dropdown-toggle pulse" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="icofont-alarm fs-5"></i>
+                                <span class="pulse-ring"></span>
+                            </a>
+                            <div id="NotificationsDiv" class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-sm-end p-0 m-0">
+                                <div class="card border-0 w380">
+                                    <div class="card-header border-0 p-3">
+                                        <h5 class="mb-0 font-weight-light d-flex justify-content-between">
+                                            <span>Notifications</span>
+                                            <span class="badge text-white">14</span>
+                                        </h5>
+                                    </div>
+                                    <div class="tab-content card-body">
+                                        <div class="tab-pane fade show active">
+                                            <ul class="list-unstyled list mb-0">
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar1.jpg" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Molly Cornish</span> <small>2MIN</small></p>
+                                                            <span class="">Added  2021-02-19 e-Learn links_no_expiration_report.csv <span class="badge bg-success">Review</span></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <div class="avatar rounded-circle no-thumbnail">DF</div>
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Diane Fisher</span> <small>13MIN</small></p>
+                                                            <span class="">Server added Get Started with e-Learn.pdf</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar3.jpg" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Andrea Gill</span> <small>1HR</small></p>
+                                                            <span class="">Server added Document.docx</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar5.jpg" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Diane Fisher</span> <small>13MIN</small></p>
+                                                            <span class="">Add folder on Server</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2 mb-1 border-bottom">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar6.jpg" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Andrea Gill</span> <small>1HR</small></p>
+                                                            <span class="">Delete folder on Server</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="py-2">
+                                                    <a href="javascript:void(0);" class="d-flex">
+                                                        <img class="avatar rounded-circle" src="assets/images/xs/avatar7.jpg" alt="">
+                                                        <div class="flex-fill ms-2">
+                                                            <p class="d-flex justify-content-between mb-0 "><span class="font-weight-bold">Zoe Wright</span> <small class="">1DAY</small></p>
+                                                            <span class="">The generated Lorem Ipsum</span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <a class="card-footer text-center border-top-0" href="#"> View all notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
+                            <div class="u-info me-2">
+                                <p class="mb-0 text-end line-height-sm "><span class="font-weight-bold">Justin Fisher</span></p>
+                                <small>Teacher Profile</small>
+                            </div>
+                            <a class="nav-link dropdown-toggle pulse p-0" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                <img class="avatar lg rounded-circle img-thumbnail" src="assets/images/profile-teacher.jpg" alt="profile">
+                            </a>
+                            <div class="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-end p-0 m-0">
+                                <div class="card border-0 w280">
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex py-1">
+                                            <img class="avatar rounded-circle" src="assets/images/profile-teacher.jpg" alt="profile">
+                                            <div class="flex-fill ms-3">
+                                                <p class="mb-0"><span class="font-weight-bold">Justin Fisher</span></p>
+                                                <small class="">justin.fisher@gamil.com</small>
+                                            </div>
+                                        </div>
+                                        
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                    </div>
+                                    <div class="list-group m-2 ">
+                                        <a href="users.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-settings fs-6 me-3"></i>User Settings</a>
+                                        <a href="groups.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-user-group fs-6 me-3"></i>View team & groups</a>
+                                        <a href="ui-elements/auth-signin.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
+                                        <div><hr class="dropdown-divider border-dark"></div>
+                                        <a href="ui-elements/auth-signup.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-contact-add fs-5 me-3"></i>Add personal account</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- menu toggler -->
+                    <button class="navbar-toggler p-0 border-0 menu-toggle order-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainHeader">
+                        <span class="fa fa-bars"></span>
+                    </button>
+    
+                    <!-- main menu Search-->
+                    <div class="order-0 col-lg-4 col-md-4 col-sm-12 col-12 mb-3 mb-md-0 ">
+                        <div class="input-group flex-nowrap input-group-lg">
+                            <button type="button" class="input-group-text" id="addon-wrapping"><i class="fa fa-search"></i></button>
+                            <input type="search" class="form-control" placeholder="Search" aria-label="search" aria-describedby="addon-wrapping">
+                            <button type="button" class="input-group-text add-member-top" id="addon-wrappingone" data-bs-toggle="modal" data-bs-target="#addUser"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+        </div>
+
+        <!-- Body: Body -->
+        <div class="body d-flex py-lg-3 py-md-2">
+            <div class="container-xxl">
+                <div class="row clearfix row-deck g-4">
+                    <div class="col-lg-8 col-md-12 flex-column">
+                        <div class="card">
+                            <div class="card-header py-3">
+                                <h6 class="mb-0 fw-bold">Patients Management</h6>
+                            </div>
+                            <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="card mb-3 color-bg-200">
+                            <div class="card-body">
+                                <div class="card-body bg-primary rounded-3 mb-4">
+                                    <div class="info-watch d-flex justify-content-between align-items-center">
+                                        <span class="text-white fw-bold">Quick Stats</span>
+                                    </div>
+                                    <ul class="list-unstyled list-group list-group-custom list-group-flush mb-0 mt-3">
+                                        <li class="list-group-item py-3 bg-primary">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg rounded-circle no-thumbnail no-bg"><i class="icofont-users-alt-5 text-white fs-2"></i></div>
+                                                <div class="flex-fill ms-3">
+                                                    <span class="text-white fw-bold">12</span>
+                                                    <h6 class="mb-0 text-white">Reports Generated Today</h6>
+                                                </div>
+                                                <a href="users.html" class="btn bg-white "><i class="icofont-male fs-6"></i></a>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item py-3 bg-primary">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg rounded-circle no-thumbnail no-bg"><i class="icofont-share-alt text-white fs-2"></i></div>
+                                                <div class="flex-fill ms-3">
+                                                    <span class="text-white fw-bold">32</span>
+                                                    <h6 class="mb-0 text-white">All Time Reports Generated</h6>
+                                                </div>
+                                                <a href="file-requests.html" class="btn bg-white"><i class="icofont-files-stack fs-6 "></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="licences_used">
+                                    <h6 class="mb-3 fw-bold ">Users with Reports</h6>
+                                    <div id="apex-circle-gradient"></div>
+                                    <div class="dividers-block"></div>
+                                    <div class="card mb-4 shadow-sm overflow-hidden border-0">
+                                        <div class="card-body overflow-hidden pb-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg  rounded-1 no-thumbnail bg-primary text-white"><i class="bi bi-handbag-fill fs-4"></i></div>
+                                                <div class="flex-fill ms-3 text-truncate">
+                                                    <div class="">Uploaded EDF Files</div>
+                                                    <h5 class="mb-0 ">15</h5>
+                                                </div>
+                                                <button type="button" class="btn btn-link text-decoration-none  rounded-1" data-bs-toggle="tooltip" data-bs-placement="left" title="The percentage of memebrs in your team out of the Licences you purchased">
+                                                    <i class="bi bi-info-circle-fill "></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="apexspark1"></div>
+                                    </div>
+                                    <div class="card mb-4 shadow-sm overflow-hidden border-0">
+                                        <div class="card-body overflow-hidden pb-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg  rounded-1 no-thumbnail bg-primary text-white"><i class="bi bi-person-check-fill fs-4"></i></div>
+                                                <div class="flex-fill ms-3 text-truncate">
+                                                    <div class="">qEEG 1</div>
+                                                    <h5 class="mb-0 ">12</h5>
+                                                </div>
+                                                <button type="button" class="btn btn-link text-decoration-none  rounded-1" data-bs-toggle="tooltip" data-bs-placement="left" title="The percentage of memebrs in your team out of the Active members">
+                                                    <i class="bi bi-info-circle-fill "></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="apexspark2"></div>
+                                    </div>
+                                    <div class="card mb-4 shadow-sm overflow-hidden border-0">
+                                        <div class="card-body overflow-hidden pb-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg  rounded-1 no-thumbnail bg-primary text-white"><i class="bi bi-patch-check-fill fs-4 "></i></div>
+                                                <div class="flex-fill ms-3 text-truncate">
+                                                    <div class="">qEEG 2</div>
+                                                    <h5 class="mb-0 ">03</h5>
+                                                </div>
+                                                <button type="button" class="btn btn-link text-decoration-none  rounded-1" data-bs-toggle="tooltip" data-bs-placement="left" title="The percentage of memebrs in your team out of the Licences you purchased">
+                                                    <i class="bi bi-info-circle-fill "></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="apexspark3"></div>
+                                    </div>
+                                    <div class="card shadow-sm overflow-hidden border-0">
+                                        <div class="card-body overflow-hidden pb-0">
+                                            <div class="d-flex align-items-center">
+                                                <div class="avatar lg  rounded-1 no-thumbnail bg-primary text-white"><i class="bi bi-gift-fill fs-4 "></i></div>
+                                                <div class="flex-fill ms-3 text-truncate">
+                                                    <div class="">qEEG 3</div>
+                                                    <h5 class="mb-0 ">03</h5>
+                                                </div>
+                                                <button type="button" class="btn btn-link text-decoration-none  rounded-1" data-bs-toggle="tooltip" data-bs-placement="left" title="The percentage of memebrs in your team out of the Licences you purchased">
+                                                    <i class="bi bi-info-circle-fill "></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="apexspark4"></div>
+                                    </div>
+                                </div>
+
+                                <div class="dividers-block"></div>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <div class="card bg-primary">
+                                            <div class="card-body text-white">
+                                                <i class="icofont-file-document fs-3"></i>
+                                                <h6 class="mt-3 mb-0">Document</h6>
+                                                <span class="text-white">1024 Files</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-primary">
+                                            <div class="card-body text-white">
+                                                <i class="icofont-image fs-3"></i>
+                                                <h6 class="mt-3 mb-0">Images</h6>
+                                                <span class="text-white">10244 Files</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-primary">
+                                            <div class="card-body text-white">
+                                                <i class="icofont-file-document fs-3"></i>
+                                                <h6 class="mt-3 mb-0">Videos</h6>
+                                                <span class="text-white">8456 Files</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-primary">
+                                            <div class="card-body text-white">
+                                                <i class="icofont-ui-file fs-3"></i>
+                                                <h6 class="mt-3 mb-0">Others</h6>
+                                                <span class="text-white">88 Files</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Row End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery Core Js -->
+<script src="assets/bundles/libscripts.bundle.js"></script>
+
+<!-- Plugin Js-->
+<script src="assets/bundles/carousel.bundle.js"></script>
+<script src="assets/bundles/apexcharts.bundle.js"></script>
+
+<!-- Jquery Page Js -->
+<script src="js/template.js"></script>
+<script src="js/page/index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.sidebar-mini .brand-icon .logo-text {
+    display: none;
+}
+.modal { z-index: 99999}
+span.field-error {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: #dc3545;
+}
