@@ -4,7 +4,6 @@ This repository contains the code for the Neuromap Application. Follow the steps
 
 ## Prerequisites
 
-- [Git](https://git-scm.com/downloads)
 - Django
 - Python
 - html
@@ -35,3 +34,5 @@ DB_PORT=
 ```bash
 python manage.py runserver
 ```
+
+### Db is hosted on [aiven](https://console.aiven.io/account/a4d5f022b326/project/venturedata-3b07/services/pg-26d9a050/overview)
