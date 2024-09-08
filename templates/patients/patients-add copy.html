@@ -33,7 +33,7 @@
                 <li><a class="m-link active" href="patients-add.html"><i class="icofont-ui-clock"></i> <span>Add Patient</span></a></li>
                 <li><a class="m-link" href="settings.html"><i class="icofont-star-e-Learn"></i> <span>Settings</span></a></li>
                 <li><a class="m-link" href="support.html"><i class="icofont-slidshare"></i> <span>Help/Support</span></a></li>
-                <li><a class="m-link" href="logout.html"><i class="icofont-man-in-glasses"></i> <span>Logout</span></a></li>
+                <li><a class="m-link" href="{% url 'logout' %}"><i class="icofont-man-in-glasses"></i> <span>Logout</span></a></li>
             </ul>
 
             <!-- Theme: Switch Theme -->
@@ -177,7 +177,7 @@
                                     <div class="list-group m-2 ">
                                         <a href="users.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-settings fs-6 me-3"></i>User Settings</a>
                                         <a href="groups.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-ui-user-group fs-6 me-3"></i>View team & groups</a>
-                                        <a href="ui-elements/auth-signin.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
+                                        <a href="{% url 'logout' %}" class="list-group-item list-group-item-action border-0 "><i class="icofont-logout fs-6 me-3"></i>Signout</a>
                                         <div><hr class="dropdown-divider border-dark"></div>
                                         <a href="ui-elements/auth-signup.html" class="list-group-item list-group-item-action border-0 "><i class="icofont-contact-add fs-5 me-3"></i>Add personal account</a>
                                     </div>
