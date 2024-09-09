@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-gf&#5h++g(%veor_(1kz0&#@u^24n+p@fm4mm#la)$-k)&8(+j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['188.166.153.11']
 
 AUTH_USER_MODEL = 'user.User'
 
