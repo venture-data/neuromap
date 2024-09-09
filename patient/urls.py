@@ -5,6 +5,7 @@ from . import views
 
 
 urlpatterns = [
+    path('patients/', views.patients_all, name='patients'),
     path('patients-add/', views.patients_add, name='patients_add'),
     path('patients-details/', views.patients_details, name='patients_details'),
     path('qeeg-recording-page/', views.qeeg_recording_page, name='qeeg_recording_page'),

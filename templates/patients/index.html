@@ -29,14 +29,16 @@
             </a>
             <!-- Menu: main ul -->
             <ul class="menu-list flex-grow-1 mt-3">
-                <li><a class="m-link active" href="index.html"><i class="icofont-home fs-5"></i><span>Home</span></a>
+                <li><a class="m-link active" href="{% url 'dashboard' %}"><i class="icofont-home fs-5"></i><span>Home</span></a>
                 </li>
-                <li><a class="m-link" href="patients.html"><i class="icofont-patient-bed"></i> <span>Patients</span></a>
+                <li><a class="m-link" href="{% url 'patients' %}"><i class="icofont-patient-bed"></i> <span>Patients</span></a>
                 </li>
-                <li><a class="m-link" href="patients.html"><i class="icofont-archive"></i> <span>Archived Patients</span></a></li>
+                <li><a class="m-link" href="{% url 'patients_details' %}"><i class="icofont-archive"></i> <span>Archived Patients</span></a></li>
                 <li><a class="m-link" href="{% url 'patients_add' %}"><i class="icofont-plus-square"></i> <span>Add Patient</span></a></li>
-                <li><a class="m-link" href="settings.html"><i class="icofont-gear"></i> <span>Settings</span></a></li>
-                <li><a class="m-link" href="support.html"><i class="icofont-question-square"></i> <span>Help/Support</span></a></li>
+                <li><a class="m-link" href="{% url 'qeeg_recording_page' %}"><i class="icofont-record"></i> <span>QEEG Recording</span></a></li>
+                <li><a class="m-link" href="{% url 'reports' %}"><i class="icofont-paper"></i> <span>Reports</span></a></li>
+                <li><a class="m-link" href="{% url 'settings' %}"><i class="icofont-gear"></i> <span>Settings</span></a></li>
+                <li><a class="m-link" href="{% url 'support' %}"><i class="icofont-question-square"></i> <span>Help/Support</span></a></li>
                 <li><a class="m-link" href="{% url 'logout' %}"><i class="icofont-logout"></i> <span>Logout</span></a></li>
             </ul>
 
@@ -649,8 +651,8 @@
 <script src="{% static 'assets/bundles/apexcharts.bundle.js' %}"></script>
 
 <!-- Jquery Page Js -->
-<script src="% static 'js/template.js' %"></script>
-<script src="% static 'js/page/index.js' %"></script>
+<script src="{% static 'js/template.js' %}"></script>
+<script src="{% static 'js/page/index.js' %}"></script>
 
 </body>
 </html>

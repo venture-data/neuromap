@@ -27,6 +27,9 @@ def patients_add(request):
 
     return render(request, 'patients/patients-add.html', {'form': form})
 
+def patients_all(request):
+    return render(request, 'patients/patients.html')
+
 def patients_details(request):
     return render(request, 'patients/patients-details.html')
 

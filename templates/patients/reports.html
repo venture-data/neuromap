@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -6,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Reports Management </title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon-->
+    <link rel="icon" href="{% static 'favicon.ico" type="image/x-icon' %}"> <!-- Favicon-->
     <!-- plugin css file  -->
-    <link rel="stylesheet" href="assets/css/carousel.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/carousel.min.css' %}" />
     <!-- project css file  -->
-    <link rel="stylesheet" href="assets/css/e-learn.style.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="{% static 'assets/css/e-learn.style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
 </head>
 <body>
 
@@ -22,19 +23,22 @@
         <div class="d-flex flex-column h-100">
             <a href="index.html" class="mb-0 brand-icon">
                 <span class="logo-icon" style="background: none">
-                    <img src="assets/images/logo-icon.png" width="70" />
+                    <img src="{% static 'assets/images/logo-icon.png' %}" width="70" />
                 </span>
-                <span class="logo-text"><img src="assets/images/logo.png" class="img-fluid" /></span>
+                <span class="logo-text"><img src="{% static 'assets/images/logo.png' %}" class="img-fluid" /></span>
             </a>
             <!-- Menu: main ul -->
             <ul class="menu-list flex-grow-1 mt-3">
-                <li><a class="m-link" href="index.html"><i class="icofont-home fs-5"></i><span>Home</span></a>
+                <li><a class="m-link active" href="{% url 'dashboard' %}"><i class="icofont-home fs-5"></i><span>Home</span></a>
                 </li>
-                <li><a class="m-link active" href="patients.html"><i class="icofont-patient-bed"></i> <span>Patients</span></a>
+                <li><a class="m-link" href="{% url 'patients' %}"><i class="icofont-patient-bed"></i> <span>Patients</span></a>
                 </li>
-                <li><a class="m-link" href="patients.html"><i class="icofont-archive"></i> <span>Archived Patients</span></a></li>                <li><a class="m-link" href="patients-add.html"><i class="icofont-plus-square"></i> <span>Add Patient</span></a></li>
-                <li><a class="m-link" href="settings.html"><i class="icofont-gear"></i> <span>Settings</span></a></li>
-                <li><a class="m-link" href="support.html"><i class="icofont-question-square"></i> <span>Help/Support</span></a></li>
+                <li><a class="m-link" href="{% url 'patients_details' %}"><i class="icofont-archive"></i> <span>Archived Patients</span></a></li>
+                <li><a class="m-link" href="{% url 'patients_add' %}"><i class="icofont-plus-square"></i> <span>Add Patient</span></a></li>
+                <li><a class="m-link" href="{% url 'qeeg_recording_page' %}"><i class="icofont-record"></i> <span>QEEG Recording</span></a></li>
+                <li><a class="m-link" href="{% url 'reports' %}"><i class="icofont-paper"></i> <span>Reports</span></a></li>
+                <li><a class="m-link" href="{% url 'settings' %}"><i class="icofont-gear"></i> <span>Settings</span></a></li>
+                <li><a class="m-link" href="{% url 'support' %}"><i class="icofont-question-square"></i> <span>Help/Support</span></a></li>
                 <li><a class="m-link" href="{% url 'logout' %}"><i class="icofont-logout"></i> <span>Logout</span></a></li>
             </ul>
 
@@ -311,15 +315,15 @@
 </div>
 
 <!-- Jquery Core Js -->
-<script src="assets/bundles/libscripts.bundle.js"></script>
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script>
 
 <!-- Plugin Js-->
-<script src="assets/bundles/carousel.bundle.js"></script>
-<script src="assets/bundles/apexcharts.bundle.js"></script>
+<script src="{% static 'assets/bundles/carousel.bundle.js' %}"></script>
+<script src="{% static 'assets/bundles/apexcharts.bundle.js' %}"></script>
 
 <!-- Jquery Page Js -->
-<script src="js/template.js"></script>
-<script src="js/page/index.js"></script>
+<script src="{% static 'js/template.js' %}"></script>
+<script src="{% static 'js/page/index.js' %}"></script>
 
 </body>
 </html>
